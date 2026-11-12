@@ -4,7 +4,29 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Верификация брендовой одежды от ТРУ СТАРЗ</title>
+        <meta name="description" content="Верификация брендовой одежды от ТРУ СТАРЗ проверьте Вашу одежду на подлинность на этой странице.">
+
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="ТРУ СТАРЗ">
+        <meta property="og:title" content="Верификация брендовой одежды от ТРУ СТАРЗ">
+        <meta property="og:description" content="Верификация брендовой одежды от ТРУ СТАРЗ проверьте Вашу одежду на подлинность на этой странице.">
+        <meta property="og:url" content="{{ url('/') }}">
+        <meta property="og:image" content="{{ url('/img/og-image.jpg') }}">
+        <meta property="og:image:width" content="642">
+        <meta property="og:image:height" content="540">
+        <meta property="og:locale" content="ru_RU">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Верификация брендовой одежды от ТРУ СТАРЗ">
+        <meta name="twitter:description" content="Верификация брендовой одежды от ТРУ СТАРЗ проверьте Вашу одежду на подлинность на этой странице.">
+        <meta name="twitter:image" content="{{ url('/img/og-image.jpg') }}">
+
+        <link rel="icon" href="/favicon.ico" sizes="48x48">
+        <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+        <link rel="manifest" href="/site.webmanifest">
 
         @fonts
 
@@ -43,7 +65,7 @@
                 font-family: ui-sans-serif, system-ui, sans-serif;
                 font-size: clamp(1rem, 2.5vw, 1.5rem);
                 letter-spacing: 0.06em;
-                color: rgba(255, 255, 255, 0.85);
+                color: #000;
                 text-align: center;
                 text-transform: uppercase;
                 opacity: 0;
