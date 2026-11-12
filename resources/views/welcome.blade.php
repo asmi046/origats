@@ -30,6 +30,10 @@
 
         @fonts
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @endif
@@ -49,7 +53,13 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                animation: hero-fade-in 2s ease-out both;
+                animation: hero-fade-in 2s ease-out 1.5s both;
+            }
+
+            @media (max-width: 768px) {
+                .hero {
+                    background-image: url('/img/main_page_b_mob.webp');
+                }
             }
 
             .hero__logo {
@@ -57,21 +67,21 @@
                 opacity: 0;
                 filter: blur(24px);
                 transform: scale(1.35);
-                animation: logo-stamp 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.9s both;
+                animation: logo-stamp 1.6s cubic-bezier(0.16, 1, 0.3, 1) 2.4s both;
             }
 
             .hero__slogan {
                 margin-top: 2rem;
-                font-family: ui-sans-serif, system-ui, sans-serif;
-                font-size: clamp(1rem, 2.5vw, 1.5rem);
-                letter-spacing: 0.06em;
+                font-family: 'Bebas Neue', ui-sans-serif, system-ui, sans-serif;
+                font-size: clamp(1.25rem, 3vw, 2rem);
+                letter-spacing: 0.1em;
                 color: #000;
                 text-align: center;
                 text-transform: uppercase;
                 opacity: 0;
                 filter: blur(12px);
                 transform: translateY(10px);
-                animation: slogan-stamp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 1.8s both;
+                animation: slogan-stamp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 3.3s both;
             }
 
             @keyframes slogan-stamp {
@@ -114,7 +124,8 @@
 
             @media (prefers-reduced-motion: reduce) {
                 .hero,
-                .hero__logo {
+                .hero__logo,
+                .hero__slogan {
                     animation: none;
                     opacity: 1;
                     filter: none;
