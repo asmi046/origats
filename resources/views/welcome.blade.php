@@ -73,6 +73,7 @@
             .hero__slogan {
                 margin-top: 2rem;
                 font-family: 'Bebas Neue', ui-sans-serif, system-ui, sans-serif;
+                font-weight: bold;
                 font-size: clamp(1.25rem, 3vw, 2rem);
                 letter-spacing: 0.1em;
                 color: #000;
