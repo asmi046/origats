@@ -45,6 +45,7 @@
 
         .hero {
             min-height: 100vh;
+            min-height: 100svh;
             background-color: #000;
             background-image: url('/img/main_page_b.webp');
             background-size: cover;
@@ -74,7 +75,7 @@
             margin: 2rem 20px 0 20px;
             font-family: 'Bee Three', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
             font-weight: 400;
-            font-size: clamp(1.25rem, 4vw, 4rem);
+            font-size: clamp(1.8rem, 4vw, 4rem);
             letter-spacing: 0.1em;
             background: linear-gradient(110deg,
                     #000 0%,
