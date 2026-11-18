@@ -95,6 +95,7 @@
             transform: translateY(10px);
             animation: slogan-stamp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 3.3s both,
                 slogan-shine 3.5s linear 5s infinite;
+            line-height: 1.1;
         }
 
         @keyframes slogan-shine {
@@ -110,6 +111,7 @@
         .hero__galo-wrap {
             position: relative;
             margin-top: 2.5rem;
+            margin-bottom: 1rem;
             width: min(60vw, 150px);
             aspect-ratio: 1;
             display: flex;
@@ -223,7 +225,7 @@
     <div class="hero">
         <img class="hero__logo" src="/img/logo.svg" alt="{{ config('app.name', 'Laravel') }}">
         <p class="hero__slogan">
-            Ваша продукция оригинальная, при наличии этой галограммы
+            Ваша продукция оригинальная, при наличии этой голограммы
         </p>
         <div class="hero__galo-wrap">
             <img class="hero__galo" src="/img/galo.webp" alt="Голограмма ТРУ СТАРЗ">
