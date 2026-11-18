@@ -63,12 +63,46 @@
             }
         }
 
-        .hero__logo {
+        .hero__logo-wrap {
+            position: relative;
             width: min(40vw, 219px);
+        }
+
+        .hero__logo-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg,
+                    transparent 0%,
+                    transparent 46%,
+                    rgba(230, 235, 240, 0.95) 50%,
+                    transparent 54%,
+                    transparent 100%);
+            background-size: 250% 250%;
+            background-position: 100% 100%;
+            -webkit-mask: url('/img/logo.svg') center / contain no-repeat;
+            mask: url('/img/logo.svg') center / contain no-repeat;
+            animation: logo-shine 3.5s linear 4s infinite;
+            pointer-events: none;
+        }
+
+        .hero__logo {
+            width: 100%;
+            display: block;
             opacity: 0;
             filter: blur(24px);
             transform: scale(1.35);
             animation: logo-stamp 1.6s cubic-bezier(0.16, 1, 0.3, 1) 2.4s both;
+        }
+
+        @keyframes logo-shine {
+            0% {
+                background-position: 100% 100%;
+            }
+
+            100% {
+                background-position: 0% 0%;
+            }
         }
 
         .hero__slogan {
@@ -223,7 +257,9 @@
 
 <body>
     <div class="hero">
-        <img class="hero__logo" src="/img/logo.svg" alt="{{ config('app.name', 'Laravel') }}">
+        <div class="hero__logo-wrap">
+            <img class="hero__logo" src="/img/logo.svg" alt="{{ config('app.name', 'Laravel') }}">
+        </div>
         <p class="hero__slogan">
             Ваша продукция оригинальная, при наличии этой голограммы
         </p>
